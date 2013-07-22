@@ -6,7 +6,7 @@ class rsyslog::base {
 
   file {'/etc/rsyslog.conf':
     mode    => '0644',
-    content => template('rsyslog.conf.erb'),
+    content => template('rsyslog/rsyslog.conf.erb'),
     notify  => Service['rsyslog'],
     require => Package['rsyslog'],
   }
