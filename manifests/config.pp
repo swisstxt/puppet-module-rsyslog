@@ -1,10 +1,10 @@
 define rsyslog::config (
   $content = '',
-  $ensure = present,
   $order = '20',
+  $ensure = present,
 ){
 
-  file {"/etc/rsyslog.d/${rsyslog::order}_${::dname}.conf":
+  file {"/etc/rsyslog.d/${rsyslog::config::order}_${rsyslog::config::title}.conf":
     ensure  => $ensure,
     mode    => '0644',
     owner   => 'root',
