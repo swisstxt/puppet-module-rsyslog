@@ -1,7 +1,6 @@
 define rsyslog::config (
-  $ensure = present,
   $content = '',
-  $source = '',
+  $ensure = present,
   $order = '20',
 ){
 
