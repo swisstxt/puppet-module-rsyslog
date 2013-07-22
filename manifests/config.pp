@@ -4,7 +4,7 @@ define rsyslog::config (
   $ensure = present,
 ){
 
-  file {"/etc/rsyslog.d/${rsyslog::config::order}_${rsyslog::config::title}.conf":
+  file {"/etc/rsyslog.d/${order}_${title}.conf":
     ensure  => $ensure,
     mode    => '0644',
     owner   => 'root',
